@@ -6,7 +6,8 @@ import json
 import re
 from xml.etree import ElementTree
 
-device = sys.argv[1];
+device = sys.argv[1]
+clean = os.environ['CLEAN_BUILD']
 
 manufacturer = None
 
@@ -124,12 +125,13 @@ def fetch_device(device, manufacturer):
             add_to_manifest(fetch_list)
         else:
             print '  %s already in local_manifest' % repo_full
+	    if clean == "clean":
+		syncable_repos.append(device_path)
     else:
         print 'Device tree found. Skipping step.'
 
     if len(syncable_repos) > 0:
-        print 'Syncing device'
-        os.system('repo sync %s' % ' '.join(syncable_repos))
-
+	print 'Syncing device'
+	os.system('repo sync %s' % ' '.join(syncable_repos))
 
 fetch_device(device, manufacturer)

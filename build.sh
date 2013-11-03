@@ -149,6 +149,7 @@ case "$EXTRAS" in
 	;;
 	clean|cclean)
 		echo -e "${bldblu}Cleaning intermediates and output files${txtrst}"
+		export CLEAN_BUILD
 		rm -f vendor/{pa,cm,aosp}/{prebuilt/common/,proprietary/,}.get-prebuilts
 		if [ $EXTRAS == cclean ] && [ -n "${CCACHE_DIR}" ]; then
 			echo "${bldblu}Cleaning ccache${txtrst}"
@@ -221,7 +222,7 @@ else
 
 	# lunch/brunch device
 	if [ -d vendor/pa ]; then
-		echo -e "${bldblu}Lunching device [$DEVICE]${txtrst}"
+		echo -e "${bldblu}Lunching device [$DEVICE] ${cya}(Includes dependencies sync)${txtrst}"
 		export PREFS_FROM_SOURCE
 		export EXTRA_CM_PACKAGES
 		export NO_OTA_BUILD

@@ -6,6 +6,8 @@ import json
 import re
 from xml.etree import ElementTree
 
+clean = os.environ['CLEAN_BUILD']
+
 syncable_repos = []
 
 def exists_in_tree(lm, repository):
@@ -126,6 +128,8 @@ def fetch_extras(def_file):
                 syncable_repos.append(project['target_path'])
             else:
                 print '  %s already in local_manifest' % repo_full
+		if clean == "clean":
+            	    syncable_repos.append(project['target_path'])
 
         projects_file.close()
 
