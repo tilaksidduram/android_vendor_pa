@@ -25,7 +25,7 @@ txtrst=$(tput sgr0)             # Reset
 
 # Local defaults, can be overriden by environment
 : ${PREFS_FROM_SOURCE:="false"}
-: ${EXTRA_CM_PACKAGES:="true"}
+: ${EXTRA_CM_PACKAGES:="false"}
 : ${NO_OTA_BUILD:="true"}
 : ${USE_CCACHE:="true"}
 : ${CCACHE_NOSTATS:="false"}
