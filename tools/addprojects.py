@@ -129,7 +129,7 @@ def fetch_extras(def_file):
                 syncable_repos.append(project['target_path'])
             else:
                 print '  %s already in local_manifest' % repo_full
-		if clean == "clean":
+		if clean == "true":
             	    syncable_repos.append(project['target_path'])
 
         projects_file.close()

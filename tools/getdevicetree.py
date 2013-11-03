@@ -114,7 +114,7 @@ def fetch_device(device, manufacturer):
 
     syncable_repos = []
 
-    if not os.path.exists(device_path):
+    if (not os.path.exists(device_path)) or (clean == "true"):
         fetch_list = []
         print '  Check for %s in local_manifest' % repo_full
         if not is_in_manifest(repo_full):
@@ -124,10 +124,10 @@ def fetch_device(device, manufacturer):
             add_to_manifest(fetch_list)
         else:
             print '  %s already in local_manifest' % repo_full
-	    if clean == "clean":
+	    if clean == "true":
 		syncable_repos.append(device_path)
     else:
-        print 'Device tree found. Skipping step.'
+        print 'Device tree %s found. Skipping step.' % device_path
 
     if len(syncable_repos) > 0:
 	print 'Syncing device'

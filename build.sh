@@ -131,15 +131,6 @@ echo -e "${bldgrn}Start time: $(date) ${txtrst}"
 [ -n "${USE_CCACHE}" ] && export USE_CCACHE && echo -e "${cya}Building using CCACHE${txtrst}"
 [ -n "${CCACHE_DIR}" ] && export CCACHE_DIR && echo -e "${bldgrn}CCACHE: location = [${txtrst}${grn}${CCACHE_DIR}${bldgrn}], size = [${txtrst}${grn}${cache1}${bldgrn}]${txtrst}"
 
-if [ -d vendor/pa ]; then
-	echo -e "${cya}"
-	./vendor/pa/tools/getdevicetree.py $DEVICE
-	echo -en "${txtrst}"
-else
-	echo -e "${bldcya}Not PA tree, skipping device tree${txtrst}"
-fi
-echo -e ""
-
 # Decide what command to execute
 case "$EXTRAS" in
 	threads)
@@ -159,6 +150,15 @@ case "$EXTRAS" in
 		[ -d "${DIR}/out" ] && rm -Rf ${DIR}/out/*
 	;;
 esac
+
+if [ -d vendor/pa ]; then
+	echo -e "${cya}"
+	./vendor/pa/tools/getdevicetree.py $DEVICE
+	echo -en "${txtrst}"
+else
+	echo -e "${bldcya}Not PA tree, skipping device tree${txtrst}"
+fi
+echo -e ""
 
 # Fetch latest sources
 if [ "$SYNC" == "true" ]; then
