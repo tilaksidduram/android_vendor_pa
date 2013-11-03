@@ -6,7 +6,8 @@ import json
 import re
 from xml.etree import ElementTree
 
-clean = os.environ['CLEAN_BUILD']
+#if os.environ.has_key("HOME")
+clean = os.environ.get('CLEAN_BUILD','false')
 
 syncable_repos = []
 

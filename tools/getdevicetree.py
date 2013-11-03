@@ -7,8 +7,7 @@ import re
 from xml.etree import ElementTree
 
 device = sys.argv[1]
-clean = os.environ['CLEAN_BUILD']
-
+clean = os.environ.get('CLEAN_BUILD','false')
 manufacturer = None
 
 def isNullOrEmpty(value):

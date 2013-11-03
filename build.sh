@@ -149,7 +149,7 @@ case "$EXTRAS" in
 	;;
 	clean|cclean)
 		echo -e "${bldblu}Cleaning intermediates and output files${txtrst}"
-		export CLEAN_BUILD
+		export CLEAN_BUILD="true"
 		rm -f vendor/{pa,cm,aosp}/{prebuilt/common/,proprietary/,}.get-prebuilts
 		if [ $EXTRAS == cclean ] && [ -n "${CCACHE_DIR}" ]; then
 			echo "${bldblu}Cleaning ccache${txtrst}"
