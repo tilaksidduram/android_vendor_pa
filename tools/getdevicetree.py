@@ -37,7 +37,7 @@ if isNullOrEmpty(manufacturer):
 print 'Checking dependencies for device: %s -> %s' % (manufacturer, device)
 
 device_path = 'device/'+manufacturer+'/'+device
-repo_full = 'ParanoidAndroid/android_' + device_path.replace('/', '_')
+repo_full = 'AOSPA/android_' + device_path.replace('/', '_')
 
 def exists_in_tree(lm, repository):
     for child in lm.getchildren():
@@ -85,7 +85,7 @@ def add_to_manifest(repositories):
         lm = ElementTree.Element('manifest')
 
     for repository in repositories:
-        repo_account = "ParanoidAndroid"
+        repo_account = "AOSPA"
         repo_name = 'android_'+device_path.replace('/', '_')
         repo_target = device_path
         if exists_in_tree(lm, repo_full):
