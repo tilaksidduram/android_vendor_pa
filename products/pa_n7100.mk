@@ -26,7 +26,6 @@ PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
->>>>>>> legacy/kitkat
 
 # Include AOSPA common configuration
 include vendor/pa/main.mk
