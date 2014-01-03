@@ -22,10 +22,11 @@ PARANOID_BOOTANIMATION_NAME := XHDPI
 OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
+PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-#$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/pa/configs/telephony.mk)
+>>>>>>> legacy/kitkat
 
 # Include AOSPA common configuration
 include vendor/pa/main.mk

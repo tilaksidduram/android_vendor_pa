@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_l900,$(TARGET_PRODUCT))
+ifeq (pa_jfltetmo,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
@@ -23,7 +23,7 @@ PARANOID_BOOTANIMATION_NAME := XHDPI
 OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
+PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
@@ -32,16 +32,14 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/l900/full_l900.mk)
+$(call inherit-product, device/samsung/jfltetmo/full_jfltetmo.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := l900
-PRODUCT_NAME := pa_l900
+# Override AOSP build properties
+PRODUCT_NAME := pa_jfltetmo
+PRODUCT_DEVICE := jfltetmo
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SPH-L900
 PRODUCT_MANUFACTURER := samsung
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t0ltespr TARGET_DEVICE=t0ltespr BUILD_FINGERPRINT="samsung/t0ltespr/t0ltespr:4.3/JSS15J/L900VPUBMK4:user/release-keys" PRIVATE_BUILD_DESC="t0ltespr-user 4.3 JSS15J L900VPUBMK4 release-keys"
+PRODUCT_MODEL := SGH-M919
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jfltetmo TARGET_DEVICE=jfltetmo BUILD_FINGERPRINT="samsung/jfltetmo/jfltetmo:4.2.2/JDQ39/M919UVUAMDB:user/release-keys" PRIVATE_BUILD_DESC="jfltetmo-user 4.2.2 JDQ39 M919UVUAMDB release-keys"
 
 endif

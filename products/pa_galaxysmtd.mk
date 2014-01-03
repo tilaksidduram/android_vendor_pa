@@ -14,16 +14,15 @@
 
 # Check for target product
 
-ifeq (pa_l900,$(TARGET_PRODUCT))
+ifeq (pa_galaxysmtd,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
-PARANOID_BOOTANIMATION_NAME := XHDPI
+PARANOID_BOOTANIMATION_NAME := HDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_hdpi
 
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
+PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
@@ -32,16 +31,14 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/l900/full_l900.mk)
+$(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := l900
-PRODUCT_NAME := pa_l900
+# Override AOSP build properties
+PRODUCT_NAME := pa_galaxysmtd
+PRODUCT_DEVICE := galaxysmtd
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SPH-L900
 PRODUCT_MANUFACTURER := samsung
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t0ltespr TARGET_DEVICE=t0ltespr BUILD_FINGERPRINT="samsung/t0ltespr/t0ltespr:4.3/JSS15J/L900VPUBMK4:user/release-keys" PRIVATE_BUILD_DESC="t0ltespr-user 4.3 JSS15J L900VPUBMK4 release-keys"
+PRODUCT_MODEL := GT-I9000
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9000 TARGET_DEVICE=GT-I9000 BUILD_FINGERPRINT=samsung/GT-I9000/GT-I9000:2.3.5/GINGERBREAD/XXJVT:user/release-keys PRIVATE_BUILD_DESC="GT-I9000-user 2.3.5 GINGERBREAD XXJVT release-keys"
 
 endif
