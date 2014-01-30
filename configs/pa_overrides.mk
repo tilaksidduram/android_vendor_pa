@@ -15,7 +15,8 @@
 PRODUCT_PACKAGES += \
     Busybox \
     Lightbulb \
-    LockClock
+    LockClock \
+    BluetoothExt
 
 # Screen Recorder
 PRODUCT_PACKAGES += \
