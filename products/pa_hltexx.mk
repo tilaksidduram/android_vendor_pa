@@ -31,14 +31,14 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/hltexx/full_hltexx.mk)
+$(call inherit-product, device/samsung/hlte/full_hlte.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_hltexx
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := SM-N9000
+PRODUCT_MODEL := SM-N9005
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hltexx TARGET_DEVICE=hltexx BUILD_FINGERPRINT="samsung/hltetmo/hltetmo:4.3/JSS15J/N900TUVUBMI7:user/release-keys" PRIVATE_BUILD_DESC="hltetmo-user 4.3 JSS15J N900TUVUBMI7 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hltexx TARGET_DEVICE=hltexx BUILD_FINGERPRINT="samsung/hltexx/hlte:4.3/JSS15J/N9005XXUBMH1:user/release-keys" PRIVATE_BUILD_DESC="hltexx-user 4.3 JSS15J N9005XXUBMH1 release-keys"
 
 endif
 
