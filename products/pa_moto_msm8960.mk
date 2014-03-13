@@ -13,13 +13,10 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_hltexx,$(TARGET_PRODUCT))
-
-# Define PA bootanimation size
-PARANOID_BOOTANIMATION_NAME := XHDPI
+ifeq (pa_moto_msm8960,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -30,15 +27,14 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 # Include AOSPA common configuration
 include vendor/pa/main.mk
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/hlte/full_hlte.mk)
+# Inherit AOSP device configuration
+$(call inherit-product, device/motorola/moto_msm8960/full_moto_msm8960.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hltexx
-PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := SM-N9005
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hltexx TARGET_DEVICE=hltexx BUILD_FINGERPRINT="samsung/hltexx/hlte:4.3/JSS15J/N9005XXUBMH1:user/release-keys" PRIVATE_BUILD_DESC="hltexx-user 4.3 JSS15J N9005XXUBMH1 release-keys"
+PRODUCT_DEVICE := moto_msm8960
+PRODUCT_NAME := pa_moto_msm8960
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := xt926
+PRODUCT_MANUFACTURER := motorola
 
 endif
-
