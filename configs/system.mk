@@ -44,10 +44,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/pa/prebuilt/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
-
 # T-Mobile theme engine
 include vendor/pa/configs/themes_common.mk
 
