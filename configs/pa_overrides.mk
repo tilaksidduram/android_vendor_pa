@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    CellBroadcastReceiver \
     OmniSwitch
 
 # Screen Recorder
