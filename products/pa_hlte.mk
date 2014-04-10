@@ -37,7 +37,11 @@ $(call inherit-product, device/samsung/hlte/full_hlte.mk)
 PRODUCT_NAME := pa_hlte
 PRODUCT_DEVICE := hlte
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := SM-N9005
+PRODUCT_MODEL := hlte
 PRODUCT_MANUFACTURER := Samsung
+
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hlte TARGET_DEVICE=hlte
+
 endif
 
