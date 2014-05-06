@@ -48,6 +48,9 @@ endif
 ifeq (pa_falcon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_falcon.mk
 endif
+ifeq (pa_find7a,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7a.mk
+endif
 ifeq (pa_flo,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_flo.mk
 endif
@@ -75,8 +78,14 @@ endif
 ifeq (pa_i605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i605.mk
 endif
+ifeq (pa_i9082,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9082.mk
+endif
 ifeq (pa_i9100,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100.mk
+endif
+ifeq (pa_i9100g,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100g.mk
 endif
 ifeq (pa_i9300,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9300.mk
@@ -150,6 +159,12 @@ endif
 ifeq (pa_p880,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p880.mk
 endif
+ifeq (pa_p3100,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3100.mk
+endif
+ifeq (pa_p3110,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3110.mk
+endif
 ifeq (pa_serranoltexx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_serranoltexx.mk
 endif
@@ -182,6 +197,9 @@ ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
 endif
 ifeq (pa_v500,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_v500.mk
+endif
+ifeq (pa_ville,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ville.mk
 endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk
