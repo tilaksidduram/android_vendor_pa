@@ -43,6 +43,3 @@ PRODUCT_PACKAGES := \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
-
-# T-Mobile theme engine
-include vendor/pa/configs/themes_common.mk
