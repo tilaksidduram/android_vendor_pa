@@ -195,6 +195,9 @@ endif
 ifeq (pa_spyder,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_spyder.mk
 endif
+ifeq (pa_t0lte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_t0lte.mk
+endif
 ifeq (pa_targa,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_targa.mk
 endif
