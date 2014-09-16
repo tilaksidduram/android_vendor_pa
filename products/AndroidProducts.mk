@@ -21,6 +21,9 @@ endif
 ifeq (pa_amami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_amami.mk
 endif
+ifeq (pa_aries,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_aries.mk
+endif
 ifeq (pa_d2lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2lte.mk
 endif
@@ -206,6 +209,9 @@ ifeq (pa_spyder,$(TARGET_PRODUCT))
 endif
 ifeq (pa_t0lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_t0lte.mk
+endif
+ifeq (pa_taoshan,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_taoshan.mk
 endif
 ifeq (pa_targa,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_targa.mk

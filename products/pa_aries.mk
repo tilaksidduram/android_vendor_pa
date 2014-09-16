@@ -1,4 +1,4 @@
-# Copyright (C) 2014 ParanoidAndroid Project
+# Copyright (C) 2014 Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,10 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_yuga,$(TARGET_PRODUCT))
+ifeq (pa_aries,$(TARGET_PRODUCT))
+
+# Define PA bootanimation size
+PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -27,15 +30,15 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 # Include AOSPA common configuration
 include vendor/pa/main.mk
 
-# Inherit device configuration
-$(call inherit-product, device/sony/yuga/full_yuga.mk)
+# Inherit AOSP device configuration
+$(call inherit-product, device/xiaomi/aries/full_aries.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_yuga
-PRODUCT_DEVICE := yuga
-PRODUCT_BRAND := sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia Z
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C6603 TARGET_DEVICE=yuga BUILD_FINGERPRINT=Sony/C6603_1270-6697/C6603:4.4.2/10.5.A.0.230/WP5_rg:user/release-keys PRIVATE_BUILD_DESC="yuga-userdebug 4.4.2 10.5.A.0.230 WP5_rg test-keys"
+PRODUCT_NAME := pa_aries
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := MI 2
+PRODUCT_MANUFACTURER := XIAOMI
+TARGET_VENDOR_DEVICE_NAME := aries
+PRODUCT_GMS_CLIENTID_BASE := android-aries
 
 endif
