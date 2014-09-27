@@ -53,6 +53,10 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/pa/prebuilt/apk/ViPER4Android.apk:system/app/ViPER4Android.apk
+
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
