@@ -35,9 +35,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     ScreenRecorder \
-    libscreenrecorder \
-    VoicePlus \
-    OmniSwitch
+    OmniSwitch \
+    libscreenrecorder
 
 # Extra tools
 PRODUCT_PACKAGES += \
