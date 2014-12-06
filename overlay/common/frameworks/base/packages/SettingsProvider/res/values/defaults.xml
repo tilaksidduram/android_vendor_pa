@@ -19,4 +19,7 @@
 <resources>
     <!-- Use the Google backup service -->
     <string name="def_backup_transport" translatable="false">com.google.android.backup/.BackupTransportService</string>
+
+    <!-- Enable notification counters in statusbar -->
+    <integer name="def_notif_count">1</integer>
 </resources>
