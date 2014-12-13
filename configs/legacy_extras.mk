@@ -43,7 +43,9 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    LockClock
+    LockClock \
+    Eleven \
+    AudioFX
 
 # Extra tools
 PRODUCT_PACKAGES += \
