@@ -46,7 +46,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     Eleven \
     AudioFX \
-    Screencast
+    Screencast \
+    Terminal
 
 # Extra tools
 PRODUCT_PACKAGES += \
