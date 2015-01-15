@@ -35,11 +35,11 @@ PRODUCT_COPY_FILES += \
 #    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
 # SU Support
-# SUPERUSER_EMBEDDED := true
+SUPERUSER_EMBEDDED := true
 
-# PRODUCT_PACKAGES := \
-#    Superuser \
-#    su
+PRODUCT_PACKAGES += \
+    su
+#   Superuser \
 
-# PRODUCT_PROPERTY_OVERRIDES += \
-#    persist.sys.root_access=3
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
