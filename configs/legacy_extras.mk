@@ -72,6 +72,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/apk/ViPER4Android.apk:system/app/ViPER4Android.apk
 
+# Kryten2k35 OTAUpdates
+PRODUCT_PACKAGES += \
+    OTAUpdates
+
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
