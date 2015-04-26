@@ -51,7 +51,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     AudioFX \
     Screencast \
-    Terminal
+    Terminal \
+    Profiles
 
 # Extra tools
 PRODUCT_PACKAGES += \
