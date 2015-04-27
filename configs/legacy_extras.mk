@@ -44,6 +44,15 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+# CM Platform Library Resource Package
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.platform-res
+
+# CM Platform Library
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.platform \
+    org.cyanogenmod.platform.xml
+
 # Extra packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
