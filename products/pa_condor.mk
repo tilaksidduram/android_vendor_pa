@@ -31,13 +31,14 @@ include vendor/pa/main.mk
 # Inherit device configuration
 $(call inherit-product, device/motorola/condor/full_condor.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := condor
+# Override AOSP build properties
 PRODUCT_NAME := pa_condor
+PRODUCT_DEVICE := condor
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := condor
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := condor
 
+# Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=condor TARGET_DEVICE=condor
 
 endif

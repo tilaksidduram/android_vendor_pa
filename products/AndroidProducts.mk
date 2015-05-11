@@ -28,7 +28,7 @@ ifeq (pa_bacon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_bacon.mk
 endif
 ifeq (pa_condor,$(TARGET_PRODUCT))
-	PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_condor.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_condor.mk
 endif
 ifeq (pa_d800,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d800.mk
