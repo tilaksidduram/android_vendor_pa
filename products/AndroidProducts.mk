@@ -87,6 +87,9 @@ endif
 ifeq (pa_geeb,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
 endif
+ifeq (pa_ghost,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ghost.mk
+endif
 ifeq (pa_hammerhead,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hammerhead.mk
 endif
