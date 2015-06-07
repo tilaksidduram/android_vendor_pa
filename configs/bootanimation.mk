@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-# Add PA bootanimation based on xxhdpi xhdpi hdpi tvdpi resolution
+# Add PA bootanimation based on xxxhdpi xxhdpi xhdpi hdpi tvdpi resolution
 
 # PA TVDPI Devices
 ifneq ($(filter pa_n5110,$(TARGET_PRODUCT)),)
@@ -21,9 +21,16 @@ ifneq ($(filter pa_n5110,$(TARGET_PRODUCT)),)
         vendor/pa/prebuilt/bootanimation/1920x1200.zip:system/media/bootanimation.zip
 endif
 
+# PA XXXHDPI Devices
+
+ifneq ($(filter pa_d850 pa_d851 pa_d852 pa_d855 pa_find7s pa_ls990 pa_shamu pa_vs985,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/bootanimation/2560x1600.zip:system/media/bootanimation.zip
+endif
+
 # PA XXHDPI Devices
 
-ifneq ($(filter pa_bacon pa_cancro pa_d800 pa_d801 pa_d802 pa_d803 pa_d850 pa_d851 pa_d852 pa_d855 pa_dlx pa_hammerhead pa_honami pa_f320 pa_find5 pa_find7 pa_find7s pa_klte pa_hlte pa_i9500 pa_jflte pa_ls980 pa_ls990 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_shamu pa_sirius pa_togari pa_togari_gpe pa_vs980 pa_vs985 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_bacon pa_cancro pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hammerhead pa_honami pa_f320 pa_find5 pa_find7 pa_klte pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_sirius pa_togari pa_togari_gpe pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
