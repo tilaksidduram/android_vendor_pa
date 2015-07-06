@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,11 +12,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 # Check for target product
 ifeq (pa_armani,$(TARGET_PRODUCT))
 
-$(call inherit-product, device/xiaomi/armani/full_armani.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/xiaomi/armani/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -26,14 +33,16 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 # Include AOSPA common configuration
 include vendor/pa/main.mk
 
-PRODUCT_NAME := pa_armani
-BOARD_VENDOR := xiaomi
+# Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := armani
+PRODUCT_NAME := pa_armani
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := HM 1S
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := XIAOMI
-TARGET_VENDOR_DEVICE_NAME := XIAOMI
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=ARMANI PRODUCT_NAME=ARMANI
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=armani
 
 endif
