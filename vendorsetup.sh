@@ -63,6 +63,7 @@ add_lunch_combo pa_sirius-userdebug
 add_lunch_combo pa_skyrocket-userdebug
 add_lunch_combo pa_spyder-userdebug
 add_lunch_combo pa_t0lte-userdebug
+add_lunch_combo pa_victara-userdebug
 add_lunch_combo pa_taoshan-userdebug
 add_lunch_combo pa_targa-userdebug
 add_lunch_combo pa_titan-userdebug
