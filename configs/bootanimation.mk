@@ -30,7 +30,7 @@ endif
 
 # PA XXHDPI Devices
 
-ifneq ($(filter pa_bacon pa_cancro pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hammerhead pa_honami pa_f320 pa_find5 pa_find7 pa_klte pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_sirius pa_togari pa_togari_gpe pa_victara pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_bacon pa_cancro pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hammerhead pa_honami pa_f320 pa_find5 pa_find7 pa_klte pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_sirius pa_togari pa_togari_gpe pa_victara pa_vs980 pa_yuga pa_z3,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
