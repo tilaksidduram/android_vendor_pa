@@ -27,6 +27,7 @@ add_lunch_combo pa_geeb-userdebug
 add_lunch_combo pa_ghost-userdebug
 add_lunch_combo pa_hammerhead-userdebug
 add_lunch_combo pa_hercules-userdebug
+add_lunch_combo pa_himaul-userdebug
 add_lunch_combo pa_hlte-userdebug
 add_lunch_combo pa_honami-userdebug
 add_lunch_combo pa_i9100-userdebug

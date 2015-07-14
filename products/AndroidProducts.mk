@@ -99,6 +99,9 @@ endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
 endif
+ifeq (pa_himaul,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_himaul.mk
+endif
 ifeq (pa_hlte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hlte.mk
 endif
