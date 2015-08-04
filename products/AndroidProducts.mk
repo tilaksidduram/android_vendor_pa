@@ -248,6 +248,7 @@ ifeq (pa_yuga,$(TARGET_PRODUCT))
 endif
 ifeq (pa_Z00A,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_Z00A.mk
+endif
 ifeq (pa_z3,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_z3.mk
 endif
