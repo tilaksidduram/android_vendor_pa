@@ -72,6 +72,9 @@ endif
 ifeq (pa_falcon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_falcon.mk
 endif
+ifeq (pa_ferrari,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ferrari.mk
+endif
 ifeq (pa_find5,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find5.mk
 endif
