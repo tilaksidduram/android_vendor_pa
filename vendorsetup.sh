@@ -78,5 +78,6 @@ add_lunch_combo pa_vs980-userdebug
 add_lunch_combo pa_vs985-userdebug
 add_lunch_combo pa_yuga-userdebug
 add_lunch_combo pa_z3-userdebug
+add_lunch_combo pa_z3c-userdebug
 add_lunch_combo pa_Z00A-userdebug
 add_lunch_combo pa_Z008-userdebug
