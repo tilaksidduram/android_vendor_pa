@@ -1,4 +1,4 @@
-# Copyright (C) 2014 ParanoidAndroid Project
+# Copyright (C) 2015 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,9 +16,6 @@
 
 ifeq (pa_find7,$(TARGET_PRODUCT))
 
-# OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
-
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
 
@@ -28,21 +25,8 @@ include vendor/pa/main.mk
 # Inherit device configuration
 $(call inherit-product, device/oppo/find7/full_find7.mk)
 
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
 # Override AOSP build properties
 PRODUCT_NAME := pa_find7
 PRODUCT_DEVICE := find7
-PRODUCT_BRAND := oppo
-PRODUCT_MANUFACTURER := OPPO
-
-TARGET_VENDOR_PRODUCT_NAME := find7
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=find7 TARGET_DEVICE=find7
-
-## Use the latest approved GMS identifiers unless running a signed build
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=4.4.2/KVT49L/1390465867:user/release-keys PRIVATE_BUILD_DESC="msm8974-user 4.4.2 KVT49L eng.root.20141017.144947 release-keys"
-
 
 endif
