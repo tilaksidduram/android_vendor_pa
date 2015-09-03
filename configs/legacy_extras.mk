@@ -82,10 +82,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OTAUpdates
 
-# SlimSaber's WallpaperPicker
-PRODUCT_PACKAGES += \
-    WallpaperPicker
-
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
