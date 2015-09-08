@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
     AudioFX \
     Screencast \
     Terminal \
-    Profiles
+    Profiles \
+    CMSettingsProvider
 
 # Extra tools
 PRODUCT_PACKAGES += \
