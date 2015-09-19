@@ -55,7 +55,8 @@ PRODUCT_PACKAGES += \
     Screencast \
     Terminal \
     Profiles \
-    CMSettingsProvider
+    CMSettingsProvider \
+    CalendarWidget
 
 # Extra tools
 PRODUCT_PACKAGES += \
